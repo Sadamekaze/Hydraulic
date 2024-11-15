@@ -47,6 +47,7 @@ import org.geysermc.hydraulic.pack.context.PackPreProcessContext;
 import org.geysermc.hydraulic.storage.ModStorage;
 import org.geysermc.hydraulic.util.PackUtil;
 import org.geysermc.hydraulic.util.SingletonBlockGetter;
+import org.geysermc.hydraulic.util.VoxelShapeRotator;
 import org.geysermc.pack.bedrock.resource.BedrockResourcePack;
 import org.geysermc.pack.converter.converter.model.ModelStitcher;
 import org.geysermc.pack.converter.data.ModelConversionData;
@@ -245,8 +246,11 @@ public class BlockPackModule extends ConvertablePackModule<BlockPackModule, Mode
                     // TODO: This is not fully correct. On Bedrock, the shape rotates with
                     //       the block, so the collision box will need to be rotated back here
                     VoxelShape shape = state.getShape(new SingletonBlockGetter(state), BlockPos.ZERO);
-                    VoxelShape collisionShape = state.getCollisionShape(new SingletonBlockGetter(state), BlockPos.ZERO);
-
+                    VoxelShape collisionShape = VoxelShapeRotator.rotateVoxelShapeByAngles(
+                        state.getCollisionShape(new SingletonBlockGetter(state), BlockPos.ZERO),
+                        (360 - definition.variant().x()) % 360, (360 - definition.variant().y()) % 360, 0
+                    );
+                    
                     componentsBuilder.selectionBox(createBoxComponent(shape));
                     componentsBuilder.collisionBox(createBoxComponent(collisionShape));
                 } else {
