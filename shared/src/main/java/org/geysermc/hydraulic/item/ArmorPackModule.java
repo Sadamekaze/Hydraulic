@@ -57,7 +57,6 @@ public class ArmorPackModule extends PackModule<ArmorPackModule> {
 
         for (ArmorItem armorItem : armorItems) {
             ResourceLocation armorItemLocation = BuiltInRegistries.ITEM.getKey(armorItem);
-
             ResourceLocation armorTextureLocation = ResourceLocation.parse(armorItem.getMaterial().getRegisteredName());
 
             Attachables armorAttachable = new Attachables();
@@ -91,6 +90,7 @@ public class ArmorPackModule extends PackModule<ArmorPackModule> {
                 case CHEST -> geometryType = "chestplate";
                 case LEGS -> geometryType = "leggings";
                 case FEET -> geometryType = "boots";
+                default -> geometryType = "helmet";
             }
 
             final String finalGeometryType = geometryType;

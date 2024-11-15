@@ -1,6 +1,8 @@
 package org.geysermc.hydraulic.item;
 
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
@@ -11,6 +13,7 @@ import org.geysermc.geyser.api.block.custom.CustomBlockData;
 import org.geysermc.geyser.api.item.custom.NonVanillaCustomItemData;
 import org.geysermc.geyser.api.util.CreativeCategory;
 import org.geysermc.hydraulic.util.ItemGroup;
+import org.intellij.lang.annotations.Identifier;
 
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -240,14 +243,12 @@ public class CreativeMappings {
                 List.of(BlockTags.PRESSURE_PLATES)
             ), new CreativeMapping(ItemGroup.PRESSURE_PLATES, CreativeCategory.ITEMS));
 
-            /*
             put(new CreativeMappingTarget(
-                List.of(RecordItem.class),
-                List.of(ItemTags.MUSIC_DISCS),
+                List.of(Item.class),
+                List.of(TagKey.create(Registries.ITEM, ResourceLocation.parse("minecraft:music_discs"))),
                 List.of(),
                 List.of()
             ), new CreativeMapping(ItemGroup.RECORDS, CreativeCategory.ITEMS));
-            */
 
             put(new CreativeMappingTarget(
                 List.of(SignItem.class),
