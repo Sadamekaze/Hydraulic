@@ -7,6 +7,9 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
+
+import javax.annotation.Nonnull;
+
 import org.jetbrains.annotations.Nullable;
 
 public class SingletonBlockGetter implements BlockGetter {
@@ -18,17 +21,17 @@ public class SingletonBlockGetter implements BlockGetter {
 
     @Nullable
     @Override
-    public BlockEntity getBlockEntity(BlockPos blockPos) {
+    public BlockEntity getBlockEntity(@Nonnull BlockPos blockPos) {
         return EmptyBlockGetter.INSTANCE.getBlockEntity(blockPos);
     }
 
     @Override
-    public BlockState getBlockState(BlockPos blockPos) {
+    public BlockState getBlockState(@Nonnull BlockPos blockPos) {
         return this.state;
     }
 
     @Override
-    public FluidState getFluidState(BlockPos blockPos) {
+    public FluidState getFluidState(@Nonnull BlockPos blockPos) {
         return Fluids.EMPTY.defaultFluidState();
     }
 

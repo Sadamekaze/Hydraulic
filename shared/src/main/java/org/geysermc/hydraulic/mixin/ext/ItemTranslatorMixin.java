@@ -1,20 +1,11 @@
 package org.geysermc.hydraulic.mixin.ext;
 
-import com.llamalad7.mixinextras.injector.ModifyReturnValue;
-import com.llamalad7.mixinextras.sugar.Local;
-import org.geysermc.geyser.registry.type.ItemMapping;
 import org.geysermc.geyser.translator.item.ItemTranslator;
-import org.geysermc.hydraulic.HydraulicImpl;
-import org.geysermc.hydraulic.platform.mod.ModInfo;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.injection.At;
 
-import java.util.List;
-
+// TODO: Rework for 1.20.5
 @Mixin(value = ItemTranslator.class, remap = false)
 public class ItemTranslatorMixin {
-
-    // TODO Rework for 1.20.5
     //      Since translateDisplayProperties is no longer a method and the NBT library has changed
 //    @ModifyReturnValue(
 //            method = "translateDisplayProperties(Lorg/geysermc/geyser/session/GeyserSession;Lcom/github/steveice10/opennbt/tag/builtin/CompoundTag;Lorg/geysermc/geyser/registry/type/ItemMapping;C)Lcom/github/steveice10/opennbt/tag/builtin/CompoundTag;",

@@ -1,6 +1,5 @@
 package org.geysermc.hydraulic.item;
 
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
@@ -13,8 +12,6 @@ import org.geysermc.geyser.api.block.custom.CustomBlockData;
 import org.geysermc.geyser.api.item.custom.NonVanillaCustomItemData;
 import org.geysermc.geyser.api.util.CreativeCategory;
 import org.geysermc.hydraulic.util.ItemGroup;
-import org.intellij.lang.annotations.Identifier;
-
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
