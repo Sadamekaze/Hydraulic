@@ -7,7 +7,9 @@
     "ext.BlockRegistryPopulatorMixin",
     "ext.BlockStateSerializerMixin",
     "ext.MinecraftResourcePackReaderImplMixin",
-    "ext.InventoryUtilsMixin"
+    "ext.InventoryUtilsMixin",
+    "ext.ItemTranslatorMixin",
+    "ext.LocationAwareSlf4jLoggerMixin"
   ],
   "injectors": {
     "defaultRequire": 1

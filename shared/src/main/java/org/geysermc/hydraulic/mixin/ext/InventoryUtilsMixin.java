@@ -18,10 +18,7 @@ public class InventoryUtilsMixin {
      */
     @Inject(
         method = "findOrCreateItem(Lorg/geysermc/geyser/session/GeyserSession;Ljava/lang/String;)V",
-        at = @At(
-            value = "INVOKE",
-            target = "Lorg/geysermc/geyser/GeyserLogger;debug(Ljava/lang/String;)V"
-        ),
+        at = @At("INVOKE"),
         cancellable = true
     )
     private static void findOrCreateItemCreative(GeyserSession session, String itemName, CallbackInfo ci, @Share("creative") LocalBooleanRef creative) {

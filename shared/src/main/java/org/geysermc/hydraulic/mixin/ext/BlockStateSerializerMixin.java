@@ -13,7 +13,6 @@ import team.unnamed.creative.blockstate.BlockState;
 import team.unnamed.creative.serialize.minecraft.blockstate.BlockStateSerializer;
 
 @Mixin(value = BlockStateSerializer.class, remap = false)
-
 public class BlockStateSerializerMixin {
     private static Logger LOGGER = LoggerFactory.getLogger("BlockStateSerializerMixin");
 
