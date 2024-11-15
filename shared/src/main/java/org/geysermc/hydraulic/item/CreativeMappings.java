@@ -242,12 +242,14 @@ public class CreativeMappings {
                 List.of(BlockTags.PRESSURE_PLATES)
             ), new CreativeMapping(ItemGroup.PRESSURE_PLATES, CreativeCategory.ITEMS));
 
+            /*
             put(new CreativeMappingTarget(
                 List.of(Item.class),
                 List.of(TagKey.create(Registries.ITEM, ResourceLocation.parse("minecraft:music_discs"))),
                 List.of(),
                 List.of()
             ), new CreativeMapping(ItemGroup.RECORDS, CreativeCategory.ITEMS));
+            */
 
             put(new CreativeMappingTarget(
                 List.of(SignItem.class),
