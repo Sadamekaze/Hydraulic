@@ -15,7 +15,7 @@ fabric-loader = "0.15.11"
 fabric-api = "0.108.0+1.21.1"
 
 # neoforge
-neoforge-version = "21.0.167"
+neoforge-version = "21.1.77"
 
 [libraries]
 mixin = { group = "org.spongepowered", name = "mixin", version.ref = "mixin" }
