@@ -240,12 +240,14 @@ public class CreativeMappings {
                 List.of(BlockTags.PRESSURE_PLATES)
             ), new CreativeMapping(ItemGroup.PRESSURE_PLATES, CreativeCategory.ITEMS));
 
+            /*
             put(new CreativeMappingTarget(
                 List.of(RecordItem.class),
                 List.of(ItemTags.MUSIC_DISCS),
                 List.of(),
                 List.of()
             ), new CreativeMapping(ItemGroup.RECORDS, CreativeCategory.ITEMS));
+            */
 
             put(new CreativeMappingTarget(
                 List.of(SignItem.class),

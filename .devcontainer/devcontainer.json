@@ -5,7 +5,7 @@
         "ghcr.io/devcontainers/features/java:1": {
             "version": "21.0.5",
             "installMaven": "false",
-            "installGradle": "true",
+            "installGradle": "false",
             "jdkDistro": "graal"
         },
         "ghcr.io/devcontainers/features/desktop-lite:1": {}
