@@ -110,13 +110,15 @@ public class CreativeMappings {
             ), new CreativeMapping(ItemGroup.LOGS, CreativeCategory.NATURE));
 
             // TODO Remove, these are added differently to bedrock https://wiki.bedrock.dev/visuals/retexturing-spawn-eggs.html
+            /*
             put(new CreativeMappingTarget(
                 List.of(SpawnEggItem.class),
                 List.of(),
                 List.of(),
                 List.of()
             ), new CreativeMapping(ItemGroup.MOB_EGGS, CreativeCategory.NATURE));
-
+            */
+            
             put(new CreativeMappingTarget(
                 List.of(),
                 List.of(),

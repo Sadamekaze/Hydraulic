@@ -243,8 +243,6 @@ public class BlockPackModule extends ConvertablePackModule<BlockPackModule, Mode
                             .identifier(geoName)
                             .build());
 
-                    // TODO: This is not fully correct. On Bedrock, the shape rotates with
-                    //       the block, so the collision box will need to be rotated back here
                     VoxelShape shape = state.getShape(new SingletonBlockGetter(state), BlockPos.ZERO);
                     VoxelShape collisionShape = VoxelShapeRotator.rotateVoxelShapeByAngles(
                         state.getCollisionShape(new SingletonBlockGetter(state), BlockPos.ZERO),
