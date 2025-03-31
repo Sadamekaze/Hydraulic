@@ -8,7 +8,7 @@ on:
       - '.github/actions/pullrequest.yml'
       - '.idea/copyright/*.xml' 
       - '.gitignore'
-      - 'LICENSE' 
+      - 'LICENSE'
       - 'README.md'
 
 jobs:
